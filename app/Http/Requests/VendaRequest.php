@@ -31,8 +31,8 @@ class VendaRequest extends FormRequest
 public function messages(): array
 {
     return [
-        'produto_id.required' => 'O campo attribute: é obrigatório.',
-        'cliente_id.required' => 'O campo attribute: é obrigatório.',
+        'Produto_id.required' => 'O campo Produto é obrigatório.',
+        'cliente_id.required' => 'O campo Cliente é obrigatório.',
         
     ];
 }

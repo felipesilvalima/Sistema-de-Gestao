@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1); 
 
 namespace App\Http\Controllers;
 
@@ -43,7 +43,7 @@ return redirect()->back()->with('delete','Venda Excluida!');
 
 public function enviarComprovantePorEmail($id)
 {
-    $buscarVenda = Venda::where('id','=',$id)->first();
+    $buscarVenda = Venda::find($id);
     $ProdutoName = $buscarVenda->Produto->name;
     $ClienteEmail = $buscarVenda->Cliente->email;
     $ClienteName = $buscarVenda->Cliente->name;
